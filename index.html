@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WestPoint Clinic - Comprehensive healthcare services for your complete wellness">
+    <title>Home | WestPoint Clinic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-start fade-in">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="fw-bold">Epicenter of Health</h1>
+                    <h1><b>Your</b> <span class="fw-bold" style="color: #0523af;">Wellness Haven</span></h1>
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mt-3 text-muted">
+                        At WestPoint Clinic, we are dedicated to providing comprehensive healthcare services 
+                        tailored to meet the needs of every patient and to ensure you receive the highest quality of care in 
+                        a safe and welcoming environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/header.png" alt="Epicenter of Health" class="img-fluid w-100 object-fit-cover">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="desc py-5 bg-white fade-in">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="px-3">
+                        <i class="bi bi-people-fill fs-1 mb-3" style="color: #0523af;"></i>
+                        <h5 class="fw-bold" style="color: #0523af;">Expert Doctors</h5>
+                        <p class="text-muted small">
+                            Our team of licensed and experienced doctors is dedicated to providing the best care for every patient.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="px-3">
+                        <i class="bi bi-capsule-pill fs-1 mb-3" style="color: #0523af;"></i>
+                        <h5 class="fw-bold" style="color: #0523af;">Trusted Pharmacy</h5>
+                        <p class="text-muted small">
+                            We provide authentic and high-quality medicines to ensure safe and reliable treatment for all.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="px-3">
+                        <i class="bi bi-clock-history fs-1 mb-3" style="color: #0523af;"></i>
+                        <h5 class="fw-bold" style="color: #0523af;">24/7 Healthcare</h5>
+                        <p class="text-muted small">
+                            Round-the-clock healthcare support so you can receive medical help anytime you need it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about container py-5 fade-in">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="img/doctor.jpg" alt="Doctor" class="img-fluid rounded" style="height: 100%; width: 80%; object-fit: cover;">
+            </div>
+
+            <div class="col-md-6">
+                <p class="fw-bold" style="color: #0523af;">ABOUT US</p>
+                <h2 class="fw-bold">We Care About Your Health & Wellness</h2>
+                <p class="text-muted mt-3">
+                    We provide trusted doctors and reliable pharmacy services to ensure your complete 
+                    health and well-being. From medical consultations to affordable medicines, we have got you covered.
+                </p>
+
+                <div class="features mt-4">
+                    <div class="feature-item d-flex align-items-start mb-4">
+                        <div class="icon-wrapper me-3 fs-3">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Expert Medical Care</h5>
+                            <p class="text-muted mb-0 small">
+                                Access to experienced doctors and healthcare professionals ready to serve your needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item d-flex align-items-start mb-4">
+                        <div class="icon-wrapper me-3 fs-3">
+                            <i class="bi bi-capsule"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Reliable Pharmacy</h5>
+                            <p class="text-muted mb-3 small">
+                                Affordable and authentic medicines, ensuring your treatment is safe and effective.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <a class="about-button btn fw-semibold rounded-3 px-4 py-2" href="about.html">
+                            Learn More
+                        </a>
+                        <a class="contact-button btn fw-semibold rounded-3 px-4 py-2" href="contact.html">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container py-5 fade-in">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Our <span style="color: #0523af;">Health Services</span></h2>
+            <p class="text-muted">Dedicated professionals across multiple specializations to care for your health.</p>
+        </div>
+
+        <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-3">
+                            <div class="service-card">
+                                <i class="bi bi-eye fs-1"></i>
+                                <h5>Ophthalmology</h5>
+                                <p>Ophthalmologists providing complete eye care and vision services.</p>
+                                <a href="ophthamology.html" class="button btn btn-sm mt-2">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="service-card">
+                                <i class="bi bi-people fs-1"></i>
+                                <h5>Pediatrics</h5>
+                                <p>Pediatricians dedicated to children's health and development.</p>
+                                <a href="pediatrics.html" class="button btn btn-sm mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-3">
+                            <div class="service-card">
+                                <i class="bi bi-droplet-half fs-1"></i>
+                                <h5>Endocrinology</h5>
+                                <p>Endocrinologist focusing on hormones, diabetes, and metabolism care.</p>
+                                <a href="endocrinology.html" class="button btn btn-sm mt-2">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="service-card">
+                                <i class="bi bi-person-hearts fs-1"></i>
+                                <h5>General Practitioners</h5>
+                                <p>General Practitioners for overall primary healthcare and guidance.</p>
+                                <a href="practitioners.html" class="button btn btn-sm mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-3">
+                            <div class="service-card">
+                                <i class="bi bi-capsule fs-1"></i>
+                                <h5>Pharmacy</h5>
+                                <p>Licensed Pharmacist ensuring safe and effective medications.</p>
+                                <a href="pharmacy.html" class="button btn btn-sm mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                <i class="bi bi-arrow-right-circle-fill"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="bg-white fade-in">
+        <div class="container py-5">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Frequently Asked <span style="color: #0523af;">Questions</span></h2>
+                <p class="text-muted">Here are some common questions our patients ask about WestPoint Clinic.</p>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne" style="color:#0523af;">
+                            What are your clinic hours?
+                        </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            Our clinic operates from <b>8:00 AM to 8:00 PM, Monday to Saturday</b>. We also have on-call doctors available for emergency cases.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo" style="color:#0523af;">
+                            Do you accept walk-in patients?
+                        </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            Yes, we accept walk-in patients. However, we encourage booking an appointment in advance to avoid waiting times.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree" style="color:#0523af;">
+                            What services do you offer?
+                        </button>
+                    </h2>
+                    <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            We offer a range of medical services including <b>General Consultation, Pediatrics, Ophthalmology, Endocrinology, and Pharmacy</b>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour" style="color:#0523af;">
+                            How can I book an appointment?
+                        </button>
+                    </h2>
+                    <div id="faqFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            You can book an appointment online through our <b>"Book Now"</b> button or by calling our clinic directly at <b>+63 912 345 6789</b>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="faqHeadingFive">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive" style="color:#0523af;">
+                            Do you accept health insurance?
+                        </button>
+                    </h2>
+                    <div id="faqFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            Yes, we accept selected health insurance providers. Please contact our front desk to verify your insurance coverage.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="script/components.js"></script>
+    <script src="script/navbar.js"></script>
+    <script src="script/fade.js"></script>
+</body>
+</html>
