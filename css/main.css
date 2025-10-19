@@ -1,0 +1,552 @@
+/* =========================================================
+   TABLE OF CONTENTS
+   1. CSS Variables & Base Styles
+   2. Layout Components
+   3. Interactive Elements
+   4. Content Sections
+   5. Animations
+   6. Media Queries
+   ========================================================= */
+
+/* CSS VARIABLES & BASE STYLES */
+:root {
+  /* Colors */
+  --primary-color: #0523af;
+  --primary-dark: #031a82;
+  --primary-light: #dce9fc;
+  --white: #ffffff;
+  --text-dark: #0a0a0a;
+  --text-muted: #555;
+  --text-light: #6c757d;
+  
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 25px;
+  
+  /* Border Radius */
+  --radius-sm: 10px;
+  --radius-md: 15px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 3px 8px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 5px 12px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 8px 18px rgba(0, 0, 0, 0.08);
+  
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+  --transition-transform: transform 0.3s ease;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to left, var(--primary-light), var(--white));
+}
+
+/* LAYOUT COMPONENTS */
+i{
+  color: var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+.logo {
+  margin-right: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: var(--primary-light);
+  opacity: 0.9;
+}
+
+.dropdown-item.active,
+.dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: var(--spacing-lg) 0;
+}
+
+.hero-section h1 {
+  font-size: 45px;
+  line-height: 1.2;
+  margin-top: var(--spacing-sm);
+}
+
+.hero-section p {
+  font-size: 14px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Description Box */
+.desc {
+  margin-top: -20px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* INTERACTIVE ELEMENTS */
+
+/* Buttons */
+.button {
+  border-radius: var(--radius-sm);
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px 16px;
+  font-weight: 600;
+  transition: var(--transition-base);
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.about-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  margin-left: -25px;
+  transition: var(--transition-base);
+}
+
+.about-button:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.contact-button {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transition: var(--transition-base);
+}
+
+.contact-button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* CONTENT SECTIONS */
+
+/* Features Section */
+.features {
+  padding: var(--spacing-xl);
+}
+
+.feature-item {
+  transition: var(--transition-base);
+}
+
+.feature-item .icon-wrapper {
+  color: var(--primary-color);
+  transition: var(--transition-base);
+}
+
+.feature-item .icon-wrapper i {
+  transition: var(--transition-transform), color 0.3s ease;
+}
+
+.feature-item:hover .icon-wrapper i {
+  transform: scale(1.1);
+  color: var(--primary-dark);
+}
+
+/* About Us Section */
+.about-us h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.about-us p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-us img {
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+/* Mission & Vision */
+.mvabout .icon-wrapper {
+  color: var(--primary-color);
+  transition: var(--transition-base);
+}
+
+.mvabout .icon-wrapper i {
+  transition: var(--transition-transform), color 0.3s ease;
+}
+
+.mvabout:hover .icon-wrapper i {
+  transform: scale(1.1);
+  color: var(--primary-dark);
+}
+
+/* Info Cards */
+.info-card {
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  background: linear-gradient(to bottom, var(--white), #dce9fc00);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: var(--transition-base);
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.info-card h5 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.info-card p {
+  color: var(--text-muted);
+}
+
+/* Value Cards */
+.value-card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--primary-light);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-base);
+  padding: var(--spacing-lg);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.value-card h6 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: var(--spacing-xs);
+}
+
+/* Contact Section */
+.contact h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.contact p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact img {
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+/* Map Container */
+.map-container {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  height: 400px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Department Cards */
+.dept-card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--primary-light);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dept-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: #bcd2fa;
+}
+
+.dept-card i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.dept-card h5 {
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.pharmacy-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Doctors Section */
+.doctors-section h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.doctors-section .card {
+  transition: var(--transition-base);
+  border-radius: var(--radius-md);
+}
+
+.doctors-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Cards */
+.service-card {
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  background: linear-gradient(to bottom, var(--white), #dce9fc00);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 100%;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: var(--transition-base);
+}
+
+.service-card i {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card:hover {
+  transform: translateY(5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card h5 {
+  font-weight: bold;
+  margin: var(--spacing-sm) 0;
+  font-size: 18px;
+}
+
+.service-card p {
+  color: var(--text-light);
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  padding: 0 var(--spacing-md);
+  margin: 150px;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.carousel-control-prev i:hover,
+.carousel-control-next i:hover {
+  color: var(--primary-dark);
+}
+
+#servicesCarousel .carousel-inner .row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#servicesCarousel .carousel-item .col-md-3 {
+  display: flex;
+  align-items: stretch;
+}
+
+/* =========================================================
+   5. ANIMATIONS
+   ========================================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet (max-width: 991px) */
+@media (max-width: 991px) {
+  .hero-section .row {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .hero-section .col-md-6 {
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .hero-section .hero-image img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+
+  .about-us .row.mb-5.align-items-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-us p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-us .col-md-6.text-center img {
+    margin-top: -50px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .info-card,
+  .value-card {
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .map-container {
+    height: 300px;
+    margin-bottom: 1.5rem;
+  }
+
+  #servicesCarousel .carousel-item .col-md-3 {
+    width: 50%;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  footer .row {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  footer .col-lg-4,
+  footer .col-md-6 {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .about-us h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-us p {
+    font-size: 0.95rem;
+  }
+
+  .info-card,
+  .value-card {
+    padding: var(--spacing-md);
+  }
+
+  .value-card i {
+    font-size: 1.8rem;
+  }
+
+  .map-container {
+    height: 250px;
+  }
+
+  .doctors-section .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background-color: transparent !important;
+    padding: 0;
+    text-align: left;
+  }
+}
