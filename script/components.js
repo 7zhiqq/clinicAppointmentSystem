@@ -44,7 +44,7 @@ const navbarHTML = `
                     </li>
                 </ul>
             </div>
-
+            
             <div class="d-none d-lg-flex">
                 <button class="button btn btn-sm">Book Now</button>
             </div>

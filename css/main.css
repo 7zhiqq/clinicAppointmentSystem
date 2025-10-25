@@ -4,9 +4,9 @@
    2. Layout Components
    3. Interactive Elements
    4. Content Sections
-   5. Profile & Tabs (Pharmacist Profile)
-   6. Animations
-   7. Media Queries
+   5. Profile & Tabs
+   6. Forms & Modals
+   7. Animations
    ========================================================= */
 
 /* =========================================================
@@ -48,12 +48,6 @@
   box-sizing: border-box;
 }
 
-#navbar-placeholder {
-  position: sticky;
-  top: 0;
-  z-index: 1020;
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -65,7 +59,7 @@ i {
   color: var(--primary-color);
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -74,6 +68,12 @@ a{
    ========================================================= */
 
 /* Navbar */
+#navbar-placeholder {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
 .navbar {
   padding: var(--spacing-md) var(--spacing-lg);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -410,7 +410,7 @@ a{
 }
 
 .service-card:hover {
-  transform: translateY(5px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-sm);
 }
 
@@ -438,7 +438,14 @@ a{
 .carousel-control-next {
   width: auto;
   padding: 0 var(--spacing-md);
-  margin: 0 250px;
+}
+
+.carousel-control-prev {
+  left: -100px;
+}
+
+.carousel-control-next {
+  right: -100px;
 }
 
 .carousel-control-prev i,
@@ -464,9 +471,11 @@ a{
   align-items: stretch;
 }
 
-/* PROFILE & TABS (Pharmacist Profile) */
+/* =========================================================
+   5. PROFILE & TABS
+   ========================================================= */
 
-/* Profile Card Enhancements */
+/* Profile Card */
 .profile-section .card {
   transition: all 0.3s ease;
   height: 100%;
@@ -556,7 +565,7 @@ a{
   line-height: 1.6;
 }
 
-/* Timeline Items (Experience & Education) */
+/* Timeline Items */
 .timeline-item {
   position: relative;
   padding-left: 2.5rem;
@@ -581,8 +590,155 @@ a{
 }
 
 /* =========================================================
-   6. ANIMATIONS
+   6. FORMS & MODALS
    ========================================================= */
+
+/* Floating Label Styles */
+.form-floating-custom {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-floating-custom input,
+.form-floating-custom select,
+.form-floating-custom textarea {
+  width: 100%;
+  padding: 1rem 0.75rem 0.5rem 0.75rem;
+  border: 2px solid #dee2e6;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  transition: var(--transition-base);
+  background-color: var(--white);
+}
+
+.form-floating-custom textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-floating-custom label {
+  position: absolute;
+  left: 0.75rem;
+  top: 1rem;
+  padding: 0 0.25rem;
+  background-color: var(--white);
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: var(--transition-base);
+  pointer-events: none;
+}
+
+/* Float label on focus or when input has value */
+.form-floating-custom input:focus ~ label,
+.form-floating-custom input:not(:placeholder-shown) ~ label,
+.form-floating-custom select:focus ~ label,
+.form-floating-custom select:not([value=""]) ~ label,
+.form-floating-custom textarea:focus ~ label,
+.form-floating-custom textarea:not(:placeholder-shown) ~ label,
+.form-floating-custom.has-value label {
+  top: -0.5rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Border color on focus */
+.form-floating-custom input:focus,
+.form-floating-custom select:focus,
+.form-floating-custom textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(5, 35, 175, 0.1);
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: var(--radius-md);
+  border: none;
+  box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--white);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  padding: 1.5rem;
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--primary-light);
+  padding: 1.25rem 2rem;
+}
+
+/* Button Styles in Modal */
+.btn-book {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: var(--transition-base);
+}
+
+.btn-book:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-cancel {
+  background-color: var(--white);
+  border: 2px solid #dee2e6;
+  color: var(--text-muted);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: var(--transition-base);
+}
+
+.btn-cancel:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-message i {
+  font-size: 4rem;
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.success-message h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.success-message p {
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   7. ANIMATIONS
+   ========================================================= */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -603,398 +759,4 @@ a{
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* =========================================================
-   7. MEDIA QUERIES
-   ========================================================= */
-
-/* Large Tablets and Small Laptops (max-width: 1199px) */
-@media (max-width: 1199px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    margin: 100px 10px;
-  }
-}
-
-/* Tablet (max-width: 991px) */
-@media (max-width: 991px) {
-  /* Navbar */
-  .navbar-collapse {
-    background-color: var(--white);
-    padding: 1rem;
-    border-radius: var(--radius-sm);
-    margin-top: 1rem;
-    box-shadow: var(--shadow-sm);
-  }
-
-  /* Hero Section */
-  .hero-section .row {
-    flex-direction: column !important;
-    text-align: center !important;
-  }
-
-  .hero-section .col-md-6 {
-    width: 100%;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .hero-section h1 {
-    font-size: clamp(24px, 6vw, 32px);
-  }
-
-  .hero-section .hero-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* About Section */
-  .about .row {
-    flex-direction: column-reverse !important;
-  }
-
-  .about .col-md-6 {
-    width: 100%;
-  }
-
-  .about img {
-    margin-bottom: 2rem;
-    max-height: 400px;
-    object-fit: cover;
-  }
-
-  .about .features {
-    padding: var(--spacing-md);
-  }
-
-  .about .d-flex.gap-2 {
-    flex-direction: column;
-    gap: 0.5rem !important;
-  }
-
-  .about-button,
-  .contact-button {
-    width: 100%;
-    margin-left: 0 !important;
-  }
-
-  /* About Us Page */
-  .about-us .row.mb-5.align-items-center {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-us .col-md-6 {
-    width: 100%;
-  }
-
-  .about-us h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .about-us p {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .about-us .col-md-6.text-center img {
-    margin-top: 1rem;
-    max-height: 300px;
-    object-fit: cover;
-  }
-
-  .about-us .features {
-    padding: var(--spacing-md);
-  }
-
-  /* Cards */
-  .info-card,
-  .value-card {
-    width: 100%;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .dept-card {
-    min-height: 200px;
-    padding: var(--spacing-lg);
-  }
-
-  /* Contact */
-  .contact .row {
-    flex-direction: column-reverse !important;
-  }
-
-  .map-container {
-    height: 300px;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Services Carousel */
-  #servicesCarousel .carousel-item .col-md-3 {
-    width: 50%;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: none;
-  }
-
-  /* Footer */
-  footer .row {
-    flex-direction: column !important;
-    text-align: center !important;
-  }
-
-  footer .col-lg-4,
-  footer .col-md-6 {
-    width: 100%;
-    margin-bottom: var(--spacing-md);
-    text-align: center !important;
-  }
-
-  footer .text-start {
-    text-align: center !important;
-  }
-}
-
-/* Small Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: var(--spacing-md) 0;
-  }
-
-  .desc {
-    margin-top: 0;
-  }
-
-  .desc .row {
-    flex-direction: column;
-  }
-
-  .desc .col-md-4 {
-    margin-bottom: 1rem;
-  }
-
-  #servicesCarousel .carousel-item .col-md-3 {
-    width: 100%;
-  }
-
-  .service-card {
-    min-height: 240px;
-    padding: var(--spacing-lg);
-  }
-
-  /* Profile Tabs */
-  .nav-tabs .nav-link {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  .profile-name {
-    font-size: 1.25rem;
-  }
-
-  .tab-pane h5 {
-    font-size: 1.1rem;
-  }
-
-  .timeline-item {
-    padding-left: 2rem;
-  }
-
-  .tab-pane ul {
-    padding-left: 1rem;
-  }
-}
-
-/* Mobile (max-width: 576px) */
-@media (max-width: 576px) {
-  /* Typography */
-  .hero-section h1 {
-    font-size: 24px;
-  }
-
-  .about-us h1,
-  .contact h1 {
-    font-size: 1.5rem;
-  }
-
-  .about-us p,
-  .contact p {
-    font-size: 0.9rem;
-  }
-
-  /* Spacing */
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  section {
-    padding: 2rem 0 !important;
-  }
-
-  /* Cards */
-  .info-card,
-  .value-card,
-  .dept-card {
-    padding: var(--spacing-md);
-  }
-
-  .value-card i {
-    font-size: 1.8rem;
-  }
-
-  .dept-card {
-    min-height: 180px;
-  }
-
-  /* Features */
-  .feature-item {
-    flex-direction: column;
-    text-align: center;
-    align-items: center !important;
-  }
-
-  .feature-item .icon-wrapper {
-    margin-right: 0 !important;
-    margin-bottom: var(--spacing-sm);
-  }
-
-  /* Map */
-  .map-container {
-    height: 250px;
-  }
-
-  /* Doctors */
-  .doctors-section .card {
-    margin-bottom: 1rem;
-  }
-
-  .doctors-section .col-12 {
-    padding: 0 10px;
-  }
-
-  /* Buttons */
-  .button,
-  .about-button,
-  .contact-button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  /* Accordion */
-  .accordion-button {
-    font-size: 0.9rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .accordion-body {
-    font-size: 0.85rem;
-  }
-
-  /* Footer */
-  footer {
-    font-size: 0.9rem;
-  }
-
-  footer .col-lg-4 {
-    margin-bottom: 1.5rem;
-  }
-
-  /* Profile Tabs - Mobile Scrolling */
-  .nav-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .nav-tabs .nav-link {
-    white-space: nowrap;
-    padding: 0.5rem 1rem;
-  }
-
-  .profile-contact-info {
-    font-size: 0.85rem;
-  }
-}
-
-/* Extra Small Mobile (max-width: 400px) */
-@media (max-width: 400px) {
-  .hero-section h1 {
-    font-size: 20px;
-  }
-
-  .navbar-brand img {
-    height: 30px;
-  }
-
-  .dept-card {
-    min-height: 160px;
-    padding: var(--spacing-sm);
-  }
-
-  .dept-card i {
-    font-size: 1.5rem;
-  }
-
-  .dept-card h6 {
-    font-size: 0.85rem;
-  }
-
-  .dept-card p {
-    font-size: 0.75rem;
-  }
-
-  .service-card {
-    min-height: 220px;
-    padding: var(--spacing-md);
-  }
-}
-
-/* Desktop (min-width: 992px) */
-@media (min-width: 992px) {
-  .navbar-collapse {
-    background-color: transparent !important;
-    padding: 0;
-    text-align: left;
-  }
-
-  .carousel-control-prev {
-    left: -100px;
-  }
-
-  .carousel-control-next {
-    right: -100px;
-  }
-}
-
-/* Large Desktop (min-width: 1400px) */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .nav-tabs,
-  #navbar-placeholder,
-  #footer-placeholder {
-    display: none;
-  }
-
-  .tab-pane {
-    display: block !important;
-    opacity: 1 !important;
-  }
-
-  .card {
-    box-shadow: none !important;
-    border: 1px solid #ddd !important;
-  }
 }
