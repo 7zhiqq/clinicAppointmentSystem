@@ -4,11 +4,14 @@
    2. Layout Components
    3. Interactive Elements
    4. Content Sections
-   5. Animations
-   6. Media Queries
+   5. Profile & Tabs (Pharmacist Profile)
+   6. Animations
+   7. Media Queries
    ========================================================= */
 
-/* CSS VARIABLES & BASE STYLES */
+/* =========================================================
+   1. CSS VARIABLES & BASE STYLES
+   ========================================================= */
 :root {
   /* Colors */
   --primary-color: #0523af;
@@ -58,10 +61,17 @@ body {
   overflow-x: hidden;
 }
 
-/* LAYOUT COMPONENTS */
-i{
+i {
   color: var(--primary-color);
 }
+
+a{
+  text-decoration: none;
+}
+
+/* =========================================================
+   2. LAYOUT COMPONENTS
+   ========================================================= */
 
 /* Navbar */
 .navbar {
@@ -125,7 +135,9 @@ i{
   box-shadow: var(--shadow-sm);
 }
 
-/* INTERACTIVE ELEMENTS */
+/* =========================================================
+   3. INTERACTIVE ELEMENTS
+   ========================================================= */
 
 /* Buttons */
 .button {
@@ -169,7 +181,9 @@ i{
   color: var(--white);
 }
 
-/* CONTENT SECTIONS */
+/* =========================================================
+   4. CONTENT SECTIONS
+   ========================================================= */
 
 /* Features Section */
 .features {
@@ -450,9 +464,136 @@ i{
   align-items: stretch;
 }
 
+/* PROFILE & TABS (Pharmacist Profile) */
+
+/* Profile Card Enhancements */
+.profile-section .card {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.profile-section .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.profile-section .card-img-top {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  height: auto;
+}
+
+/* Profile Contact Info */
+.profile-contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-contact-info i {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Profile Name Styling */
+.profile-name {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.profile-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Tabs Styling */
+.nav-tabs {
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.nav-tabs .nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+  border-bottom-color: var(--primary-color);
+  background-color: transparent;
+}
+
+/* Tab Content */
+.tab-content {
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-pane h5 {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-pane ul {
+  padding-left: 1.5rem;
+}
+
+.tab-pane ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Timeline Items (Experience & Education) */
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline-item i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* Certification Cards */
+.certification-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0 !important;
+}
+
+.certification-card:hover {
+  border-color: var(--primary-light) !important;
+  box-shadow: 0 4px 12px rgba(5, 35, 175, 0.1);
+  transform: translateX(5px);
+}
+
 /* =========================================================
-   5. ANIMATIONS
+   6. ANIMATIONS
    ========================================================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -465,7 +606,7 @@ i{
 }
 
 /* =========================================================
-   6. MEDIA QUERIES
+   7. MEDIA QUERIES
    ========================================================= */
 
 /* Large Tablets and Small Laptops (max-width: 1199px) */
@@ -646,6 +787,28 @@ i{
     min-height: 240px;
     padding: var(--spacing-lg);
   }
+
+  /* Profile Tabs */
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .profile-name {
+    font-size: 1.25rem;
+  }
+
+  .tab-pane h5 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  .tab-pane ul {
+    padding-left: 1rem;
+  }
 }
 
 /* Mobile (max-width: 576px) */
@@ -742,6 +905,22 @@ i{
   footer .col-lg-4 {
     margin-bottom: 1.5rem;
   }
+
+  /* Profile Tabs - Mobile Scrolling */
+  .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-tabs .nav-link {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+  }
+
+  .profile-contact-info {
+    font-size: 0.85rem;
+  }
 }
 
 /* Extra Small Mobile (max-width: 400px) */
@@ -798,5 +977,24 @@ i{
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .nav-tabs,
+  #navbar-placeholder,
+  #footer-placeholder {
+    display: none;
+  }
+
+  .tab-pane {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
   }
 }

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Dr. Emily Carter - General Practitioner at WestPoint Clinic">
+    <title>Dr. Emily Carter | WestPoint Clinic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Doctor Profile Section -->
+    <section class="container py-5 fade-in">
+        <div class="row g-4 align-items-start">
+            <!-- Profile Image Column -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card border-0 shadow-sm">
+                    <img src="img/doctor2.jpg" class="card-img-top" alt="Dr. Emily Carter, General Practitioner">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold mb-1" style="color: var(--primary-color);">Dr. Emily Carter</h4>
+                        <p class="text-muted mb-3">General Practitioner</p>
+                        <div class="d-flex justify-content-center gap-2 mb-2">
+                            <i class="bi bi-envelope-fill" style="color: var(--primary-color);"></i>
+                            <small class="text-muted">emily.carter@westpoint.com</small>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2">
+                            <i class="bi bi-telephone-fill" style="color: var(--primary-color);"></i>
+                            <small class="text-muted">(034) 454-1120</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Details Column -->
+            <div class="col-12 col-md-8 col-lg-9">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <!-- Tabs Navigation -->
+                        <ul class="nav nav-tabs mb-4" id="doctorTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">
+                                    About
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="false">
+                                    Education
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab" aria-controls="experience" aria-selected="false">
+                                    Experience
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="licenses-tab" data-bs-toggle="tab" data-bs-target="#licenses" type="button" role="tab" aria-controls="licenses" aria-selected="false">
+                                    Licenses
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="doctorTabContent">
+                            <!-- About Tab -->
+                            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                                <h5 class="fw-bold mb-3" style="color: var(--primary-color);">Professional Profile</h5>
+                                <p class="text-muted">
+                                    Dr. Emily Carter is a compassionate General Practitioner committed to delivering high-quality primary healthcare to individuals and families. 
+                                    Her practice focuses on preventive medicine, patient education, and holistic care that promotes overall well-being.
+                                </p>
+                                <p class="text-muted">
+                                    She has extensive experience in diagnosing and managing a wide range of medical conditions, from acute illnesses to chronic diseases. 
+                                    Dr. Carter believes in building long-term relationships with her patients based on trust, communication, and comprehensive care.
+                                </p>
+                                
+                                <h6 class="fw-bold mt-4 mb-3" style="color: var(--primary-color);">Areas of Expertise</h6>
+                                <ul class="text-muted">
+                                    <li>Preventive & Family Medicine</li>
+                                    <li>Chronic Disease Management</li>
+                                    <li>General Health Checkups</li>
+                                    <li>Women's and Men's Health</li>
+                                    <li>Minor Surgical Procedures</li>
+                                    <li>Patient Education & Counseling</li>
+                                </ul>
+                            </div>
+
+                            <!-- Education Tab -->
+                            <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
+                                <h5 class="fw-bold mb-4" style="color: var(--primary-color);">Educational Background</h5>
+                                
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-start mb-2">
+                                        <i class="bi bi-mortarboard-fill me-3 fs-4" style="color: var(--primary-color);"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Doctor of Medicine</h6>
+                                            <p class="text-muted mb-1">University of Santo Tomas Faculty of Medicine and Surgery</p>
+                                            <small class="text-muted">2010 - 2014</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-start mb-2">
+                                        <i class="bi bi-hospital-fill me-3 fs-4" style="color: var(--primary-color);"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Residency in Family Medicine</h6>
+                                            <p class="text-muted mb-1">St. Luke’s Medical Center</p>
+                                            <small class="text-muted">2015 - 2018</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="fw-bold mt-4 mb-3" style="color: var(--primary-color);">Continuing Education</h6>
+                                <ul class="text-muted">
+                                    <li>Primary Care Certification (2020)</li>
+                                    <li>Preventive Health & Wellness Training (2021)</li>
+                                    <li>Telemedicine & Digital Health Course (2022)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Experience Tab -->
+                            <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+                                <h5 class="fw-bold mb-4" style="color: var(--primary-color);">Professional Experience</h5>
+                                
+                                <div class="mb-4 pb-3 border-bottom">
+                                    <div class="d-flex align-items-start mb-2">
+                                        <i class="bi bi-briefcase-fill me-3 fs-5" style="color: var(--primary-color);"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">General Practitioner</h6>
+                                            <p class="text-muted mb-1">WestPoint Clinic</p>
+                                            <small class="text-muted">2018 - Present</small>
+                                        </div>
+                                    </div>
+                                    <ul class="text-muted mt-3 ms-5">
+                                        <li>Provides primary healthcare and preventive medical services</li>
+                                        <li>Conducts physical examinations and health screenings</li>
+                                        <li>Diagnoses and manages acute and chronic illnesses</li>
+                                        <li>Promotes patient-centered and evidence-based care</li>
+                                    </ul>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-start mb-2">
+                                        <i class="bi bi-briefcase-fill me-3 fs-5" style="color: var(--primary-color);"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Resident Physician</h6>
+                                            <p class="text-muted mb-1">St. Luke’s Medical Center</p>
+                                            <small class="text-muted">2015 - 2018</small>
+                                        </div>
+                                    </div>
+                                    <ul class="text-muted mt-3 ms-5">
+                                        <li>Assisted in patient management and diagnosis</li>
+                                        <li>Provided clinical care in emergency and outpatient departments</li>
+                                        <li>Developed treatment plans and health education programs</li>
+                                        <li>Participated in community health outreach programs</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Licenses Tab -->
+                            <div class="tab-pane fade" id="licenses" role="tabpanel" aria-labelledby="licenses-tab">
+                                <h5 class="fw-bold mb-4" style="color: var(--primary-color);">Licenses & Certifications</h5>
+                                
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-patch-check-fill me-3 fs-4" style="color: var(--primary-color);"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Licensed Physician</h6>
+                                            <p class="text-muted mb-1">Professional Regulation Commission (PRC)</p>
+                                            <p class="text-muted mb-0">License No. 4567890</p>
+                                            <small class="text-muted">Valid: 2014 - Present</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="fw-bold mt-4 mb-3" style="color: var(--primary-color);">Professional Certifications</h6>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center p-3 border rounded">
+                                            <i class="bi bi-shield-check me-3 fs-5" style="color: var(--primary-color);"></i>
+                                            <div>
+                                                <h6 class="fw-semibold mb-0">Basic Life Support (BLS)</h6>
+                                                <small class="text-muted">Philippine Heart Association</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center p-3 border rounded">
+                                            <i class="bi bi-shield-check me-3 fs-5" style="color: var(--primary-color);"></i>
+                                            <div>
+                                                <h6 class="fw-semibold mb-0">Family Medicine Board Certification</h6>
+                                                <small class="text-muted">Philippine Academy of Family Physicians</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="fw-bold mt-4 mb-3" style="color: var(--primary-color);">Professional Memberships</h6>
+                                <ul class="text-muted">
+                                    <li>Philippine Academy of Family Physicians (PAFP)</li>
+                                    <li>Philippine Medical Association (PMA)</li>
+                                    <li>WestPoint Clinic Medical Team</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="script/components.js"></script>
+    <script src="script/navbar.js"></script>
+    <script src="script/fade.js"></script>
+</body>
+</html>
