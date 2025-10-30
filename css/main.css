@@ -760,3 +760,29 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  #servicesCarousel .carousel-item .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  }
+  /* make each card take half the width of the row */
+  #servicesCarousel .carousel-item .col-md-3 {
+    flex: 0 0 48%; /* 2 per row */
+    max-width: 48%;
+  }
+
+  /* make cards stretch nicely */
+  #servicesCarousel .service-card {
+    height: 100%;
+    padding: var(--spacing-md);
+    box-sizing: border-box;
+  }
+}
