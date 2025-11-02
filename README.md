@@ -157,10 +157,6 @@ Add new doctors by:
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📄 License
-
-This project is proprietary and confidential. All rights reserved by WestPoint Clinic.
-
 ## 👥 Credits
 
 - **Design & Development**: Kheishia Faith Mationg
